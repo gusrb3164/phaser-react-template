@@ -1,17 +1,18 @@
 import Phaser from 'phaser';
-import {Main} from './game/scenes/Main';
+import {Main} from './scenes/Main';
 import {useLayoutEffect} from 'react';
+import {VIEW_SIZE} from './constants/config';
 
 const config: Phaser.Types.Core.GameConfig = {
   type: Phaser.AUTO,
-  width: 800,
-  height: 600,
+  width: VIEW_SIZE.x,
+  height: VIEW_SIZE.y,
   scene: [Main],
   parent: 'game-container',
   physics: {
     default: 'arcade',
     arcade: {
-      gravity: {x: 0, y: 300},
+      gravity: {x: 0, y: 0},
       debug: false,
     },
   },
